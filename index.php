@@ -2,9 +2,7 @@
     require_once 'questionnaireForm.php';
     $questionnaireForm = new questionnaireForm;
     $questionnaireForm -> insertCsv();
-    $questionnaireForm -> searchCsv();
-    print_r($array);
-    exit();
+    $array = $questionnaireForm -> searchCsv();
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +37,6 @@
 
 <h2>全体結果表示</h2>
 
-<p>Q1<span> A <?= $array[0] ?>票</span><span> B 3票</span><span> C 2票</span></p>
-<p>Q2<span> A 5票</span><span> B 3票</span><span> C 2票</span></p>
-<p>Q3<span> A 5票</span><span> B 3票</span><span> C 2票</span></p>
+<p>Q1<span> A <?= $array[0] ?>票</span><span> B <?= $array[1] ?>票</span><span> C <?= $array[2] ?>票</span></p>
+<p>Q2<span> A <?= $array[3] ?>票</span><span> B <?= $array[4] ?>票</span><span> C <?= $array[5] ?>票</span></p>
+<p>Q3<span> A <?= $array[6] ?>票</span><span> B <?= $array[7] ?>票</span><span> C <?= $array[8] ?>票</span></p>
